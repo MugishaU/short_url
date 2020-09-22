@@ -14,10 +14,17 @@ def index(request):
 
     if request.method == 'POST':
         form = UrlForm(request.POST)
+        
         if form.is_valid():
-            print(index)
-            newUrl= Urls(long_url = form.cleaned_data.get('long_url'), short_url=f'shorturl/{index}')
-            newUrl.save()
+            long_url = form.cleaned_data.get('long_url')
+            if len(Urls.objects.filter(long_url=long_url) ) > 0:
+           
+                print("here")
+               
+            else:
+                print("saved")
+                newUrl= Urls(long_url = long_url , short_url=f'shorturl/{index}')
+                newUrl.save()
     else:
             form = UrlForm()
     data = {'form': form}
