@@ -34,7 +34,14 @@ def index(request):
 
 def reroute(request, pk):
     if len(Urls.objects.filter(short_url=pk)) > 0:
-        return HttpResponse ("<h1>Going to new page</h1>")
+        url = str(Urls.objects.filter(short_url=pk)[0])
+        if url.startswith("http://"):
+            return redirect(url)
+        else:
+            return redirect("http://"+url)
     else:
-        return HttpResponse ("<h1>redirect</h1>")
-    
+        return redirect('home')
+
+
+
+# def newurl(request)

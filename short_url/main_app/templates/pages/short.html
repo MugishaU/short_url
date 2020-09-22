@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short URL</title>
+</head>
+<body>
+    <h1>Short URL</h1>
+
+    <h3>Your shortened URL</h3>
+    <p>Copy the shortened link and share it in messages, texts, posts, websites and other locations.</p>
+
+    <div>
+        {% csrf_token %}
+        {{short_url}}
+
+        <a href="{% url 'home.html' %}">Create other shortened URL.</a>
+    </div>
+</body>
+</html>

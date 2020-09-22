@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="home"),
-    path('shortener/<int:pk>/', views.reroute, name="reroute")
+    path('short/<int:pk>/', views.reroute, name="reroute"),
+    # path('newurl', views.newurl, name="newurl")
 ]
