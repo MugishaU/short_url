@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Short URL</h1>
+
+    <div>
+        <h3>Paste the URL to be shortened</h3>
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            
+            <input type="submit" name="Shorten URL">
+            <p>ShortURL.at is a free tool to shorten a URL or reduce a link.</p>
+            <p>Use our URL Shortener to create a shortened link making it easy to remember.</p>
+        </form>
+    </div>
+</body>
+</html>
