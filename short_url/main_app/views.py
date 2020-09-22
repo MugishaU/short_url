@@ -19,13 +19,22 @@ def index(request):
             long_url = form.cleaned_data.get('long_url')
             if len(Urls.objects.filter(long_url=long_url) ) > 0:
            
-                print("here")
+                print(Urls.objects.filter(long_url=long_url)[0])
                
             else:
                 print("saved")
-                newUrl= Urls(long_url = long_url , short_url=f'shorturl/{index}')
+                newUrl= Urls(long_url = long_url , short_url=index)
                 newUrl.save()
     else:
             form = UrlForm()
     data = {'form': form}
     return render (request, 'pages/home.html',data)
+
+
+
+def reroute(request, pk):
+    if len(Urls.objects.filter(short_url=pk)) > 0:
+        return HttpResponse ("<h1>Going to new page</h1>")
+    else:
+        return HttpResponse ("<h1>redirect</h1>")
+    
