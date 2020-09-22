@@ -17,14 +17,9 @@ def index(request):
         
         if form.is_valid():
             long_url = form.cleaned_data.get('long_url')
-            if len(Urls.objects.filter(long_url=long_url) ) > 0:
-           
-                print(Urls.objects.filter(long_url=long_url)[0])
-               
-            else:
-                print("saved")
-                newUrl= Urls(long_url = long_url , short_url=index)
-                newUrl.save()
+            newUrl= Urls(long_url = long_url , short_url=index)
+            newUrl.save()
+            return redirect(f'newurl/{index}')
     else:
             form = UrlForm()
     data = {'form': form}
@@ -35,7 +30,7 @@ def index(request):
 def reroute(request, pk):
     if len(Urls.objects.filter(short_url=pk)) > 0:
         url = str(Urls.objects.filter(short_url=pk)[0])
-        if url.startswith("http://"):
+        if url.startswith("http://") or url.startswith("https://"):
             return redirect(url)
         else:
             return redirect("http://"+url)
@@ -44,4 +39,6 @@ def reroute(request, pk):
 
 
 
-# def newurl(request)
+def newurl(request, pk):
+    context = { 'url_object': Urls.objects.get(short_url = pk) }
+    return render(request, "pages/short.html", context)

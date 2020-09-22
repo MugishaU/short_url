@@ -8,14 +8,14 @@
 <body>
     <h1>Short URL</h1>
 
-    <h3>Your shortened URL</h3>
     <p>Copy the shortened link and share it in messages, texts, posts, websites and other locations.</p>
 
     <div>
-        {% csrf_token %}
-        {{short_url}}
+        <h3>Your new short URL is:</h3>
+        <a href="http://localhost:8000/short/{{url_object.short_url}}"><h2>http://localhost:8000/short/{{url_object.short_url}}</h2></a>
+        <h3>Long URL: {{url_object.long_url}}</h3>
 
-        <a href="{% url 'home.html' %}">Create other shortened URL.</a>
+        <a href="{% url 'home' %}">Shorten another URL</a>
     </div>
 </body>
 </html>
