@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&family=Lato&family=Source+Sans+Pro&display=swap');
+
+/* font-family: 'Asap', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Source Sans Pro', sans-serif; */
+/* *{
+    box-sizing: border-box;
+} */
+
+body{
+    background-color: #fcf8f8;
+}
+
+.top-title{
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    font-size: 50px;
+    color: rgb(62, 143, 209);
+}
+
+.paste-box {
+    position: relative;
+    left: 18%;
+    padding: 20px;
+    background-color: #ffffff;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0px 0px 11px 0px rgba(107, 107, 107, 0.404);
+}
+
+.paste{
+    font-family: 'Asap', sans-serif;
+    font-size: 35px;
+    color: rgb(78, 77, 77);
+    margin-top: -2px;
+}
+
+#sub-btn{
+    background-color: #6799da;
+    width: 9vw;
+    height: 3.5vw;
+    border: none;
+    color: white;
+    /* padding: 16px 20px 13px 20px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 0 8px 8px 0;
+    margin-left: -5px;
+    cursor: pointer;
+}
+
+#sub-btn:hover{
+    background-color: #6b9ddf;
+}
+
+#id_long_url{
+    width: 25vw;
+    height: 3vw;
+    padding: 1px 2px 4px 4px;
+    /* height: 50px; */
+    border-radius: 8px 0 0 8px;
+    border: solid 0.1px rgba(88, 88, 88, 0.247);
+    margin-left: -30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    outline: none;
+}
+
+.abt-text{
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(78, 77, 77);
+}
+
+label{
+    visibility: hidden;
+}
+
+
+#short-top{
+    width: 100%;
+    text-align: center;
+}
+
+#desc-text{
+    font-size: 18px;
+    color: rgb(78, 77, 77);
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: -10px;
+}
+
+#short-link {
+    font-family: 'Asap', sans-serif;
+    font-size: 25px;
+    color: rgb(62, 143, 209);
+    margin-top: -2px;
+}
+
+#another-text{
+    font-size: 25px;
+    color: rgb(78, 77, 77);
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: -10px;
+}
+
+@media only screen and (max-width: 900px) {
+    #sub-btn{
+        font-size: 10px;
+    }
+}

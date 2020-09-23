@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <title>Short URL</title>
 </head>
 <body>
-    <h1>Short URL</h1>
+    <h1 class="top-title" >Short URL</h1>
 
-    <p>Copy the shortened link and share it in messages, texts, posts, websites and other locations.</p>
+    <div id="short-top">
+        <h3 class="paste">Your shortened URL</h3>
+        <p id="desc-text">Copy the shortened link and share it in messages, texts, posts, websites and other locations.</p>
+    </div>
+    <div class="paste-box">
+        <h2 class="paste">Your short link is:</h2>
+        <a id="short-link" href="http://localhost:8000/short/{{url_object.short_url}}" target="_blank"><h2>http://localhost:8000/short/{{url_object.short_url}}</h2></a>
+        <p class="abt-text">Long URL: {{url_object.long_url}}</p>
 
-    <div>
-        <h3>Your new short URL is:</h3>
-        <a href="http://localhost:8000/short/{{url_object.short_url}}" target="_blank"><h2>http://localhost:8000/short/{{url_object.short_url}}</h2></a>
-        <h3>Long URL: {{url_object.long_url}}</h3>
-
-        <a href="{% url 'home' %}">Shorten another URL</a>
+        <a id="another-text" href="{% url 'home' %}">Shorten another URL</a>
     </div>
 </body>
 </html>
