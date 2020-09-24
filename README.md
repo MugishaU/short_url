@@ -20,4 +20,4 @@ A small Django website that shortens URLs and stores them in a sqlite database f
 - No Re-route for `..../newurl/{number}` where the number isn't stored in database
 
 ### Collaborators
-[@MugishaU](https://github.com/MugishaU),[@JamieSear](https://github.com/MugishaU)
+[@MugishaU](https://github.com/MugishaU), [@JamieSear](https://github.com/MugishaU)
