@@ -13,7 +13,7 @@ A small Django website that shortens URLs and stores them in a sqlite database f
     - With server running, go to `http://localhost:8000/admin`
     - Enter username: database_user
     - Enter password: python123
-    - Click `urlss`
+    - Click `Urlss`
 
 ## Known Bugs
 - Not optimised for mobile
