@@ -9,6 +9,10 @@ A small Django website that shortens URLs and stores them in a sqlite database f
 - Run `pipenv shell`
 - Run `cd short_url`
 - Run `python manage.py runserver`
+- ### To View Database
+    - With server running, go to `http://localhost:8000/admin`
+    - Enter username: database_user
+    - Enter password: python123
 
 ## Known Bugs
 - Not optimised for mobile
