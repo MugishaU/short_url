@@ -1,1 +1,1 @@
-web: gunicorn short_url.wsgi
+web: gunicorn --pythonpath short_url short_url.wsgi
